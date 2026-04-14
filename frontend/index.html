@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Smart Finance Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>💰 Smart Finance Dashboard</h1>
+
+    <!-- Balance Cards -->
+    <div class="cards">
+        <div class="card balance">
+            <h3>Balance</h3>
+            <p id="balance">₹0</p>
+        </div>
+
+        <div class="card income">
+            <h3>Income</h3>
+            <p id="income">₹0</p>
+        </div>
+
+        <div class="card expense">
+            <h3>Expense</h3>
+            <p id="expense">₹0</p>
+        </div>
+    </div>
+
+    <!-- Add Transaction -->
+    <div class="form">
+        <h2>Add Transaction</h2>
+
+        <input type="number" id="amount" placeholder="Amount">
+
+        <select id="type">
+            <option value="income">Income</option>
+            <option value="expense">Expense</option>
+        </select>
+
+        <input type="text" id="category" placeholder="Category">
+
+        <button onclick="addTransaction()">Add</button>
+    </div>
+
+    <!-- Transactions -->
+    <div class="history">
+        <h2>Transactions</h2>
+        <ul id="list"></ul>
+    </div>
+
+    <!-- Scam Checker -->
+    <div class="scam">
+        <h2>🛡 Scam Detector</h2>
+        <input type="text" id="message" placeholder="Paste message">
+        <button onclick="checkScam()">Check</button>
+        <p id="result"></p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
